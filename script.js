@@ -19,7 +19,6 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
         return;
     }
 
-    // Regex for Email Validation
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailRegex.test(email)) {
         alert('Please enter a valid email address.');
@@ -29,7 +28,6 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     alert('Form submitted successfully!');
 });
 
-// Fetch Testimonial from API
 async function fetchTestimonial() {
     const response = await fetch('https://randomuser.me/api/');
     const data = await response.json();
