@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urahara's Shoe Shop Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img-logo.jpg" alt="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#main">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger-menu" id="burger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="main" class="hero">
+        <marquee><h1>Welcome to Urahara's Shoe Shop</h1></marquee>
+        <p>Your one-stop solution for awesome products</p>
+        <a href="#contact" class="cta-button">Contact Us</a>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Our Features</h2>
+        <div class="feature-cards">
+            <div class="card">Order</div>
+            <div class="card">Contact Us</div>
+            <div class="card">Our Shops</div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Users Say</h2>
+        <b><p>The best quality shoes await you here</p></b>
+        <div id="testimonial"></div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="password" id="password" name="password" placeholder="Your Password" required>
+            <button type="button" onclick="togglePassword()">Show/Hide Password</button>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Urahara's Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>

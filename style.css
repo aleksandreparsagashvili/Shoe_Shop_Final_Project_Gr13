@@ -1,0 +1,177 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #4baf48;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #ddd;
+}
+
+.nav-links li a:hover::after {
+    transform: scaleX(1);
+}
+
+
+.burger-menu {
+    display: none;
+}
+
+.hero {
+    background: #f4f4f4;
+    padding: 100px 0;
+    text-align: center;
+    background-image: url('Latest-sneaker-trends-dominating-min.jpg');  
+    background-size: cover;    
+    background-position: center;  
+    background-repeat: no-repeat;  
+    padding: 50px 0;  
+    color: white;  
+    text-align: center;  
+    transition: background-size 0.5s ease;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.feature-cards {
+    display: flex;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials {
+    background-image: url('shoes.jpg');  
+    background-size: cover;    
+    background-position: center;  
+    background-repeat: no-repeat;  
+    opacity: 0.5;
+    padding: 50px 0;  
+    color: white;  
+    text-align: center;  
+    transition: background-size 0.5s ease;
+}
+
+.testimonials:hover {
+    background-size: 105%;
+}
+
+.contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color: #4baf48;
+    padding: 8px;
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin: 10px 0;
+    padding: 10px;
+    width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+@media (max-width: 320px) {
+    .hero {
+        padding: 50px 0;
+    }
+    .features {
+        flex-direction: column;
+    }
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+    }
+}
