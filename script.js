@@ -1,5 +1,19 @@
-document.getElementById('burger-menu').addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('active');
+document.addEventListener("DOMContentLoaded", () => {
+    const burgerMenu = document.getElementById("burger-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    burgerMenu.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+        });
+    });
+
+    const passwordToggleButton = document.getElementById("password-toggle");
+    passwordToggleButton.addEventListener("click", togglePassword);
 });
 
 function togglePassword() {
@@ -13,7 +27,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    
+
     if (!name || !email || !password) {
         alert('All fields are required!');
         return;

@@ -164,14 +164,122 @@ button:hover {
 }
 
 @media (max-width: 320px) {
-    .hero {
-        padding: 50px 0;
+    nav {
+        position: relative;
     }
-    .features {
+
+    .nav-links {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #4baf48;
+        padding: 0;
+        max-height: 0;  
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
     }
-    .burger-menu {
+
+    .nav-links.show {
+        max-height: 300px;  
+        padding: 15px 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav-links li a {
         display: block;
+        width: 100%;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
         cursor: pointer;
+        padding: 10px;
+    }
+
+    .burger-menu .bar {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 4px 0;
     }
 }
+
+
+@media (max-width: 320px) {
+    .hero {
+        padding: 40px 15px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .testimonials {
+        background-size: cover;
+        padding: 40px 10px;
+        font-size: 14px;
+    }
+
+    .testimonials h2 {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+        font-size: 14px;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    #contact-form button {
+        display: block;
+        width: 100%;
+    }
+}
+
